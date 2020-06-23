@@ -1,0 +1,24 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Elbrus Real Estate Agency</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <li class="{{#if isAll}}active{{/if}}"><a href="/adv">Все объявления</a></li>
+
+      {{#if isAuth}}
+      <li class="{{#if isAdd}}active{{/if}}"><a href="/add">Разместить объявление</a></li>
+
+      {{#if isModer}}
+      <li class="{{#if isBid}}active{{/if}}"><a href="/bid">Заявки</a></li>
+      {{/if}}
+
+      <li class="{{#if isProfile}}active{{/if}}"><a href="/profile">Профиль</a></li>
+
+      <li><a href="/auth/logout">Выйти</a></li>
+      {{else}}
+      <li class="{{#if isLogin}}active{{/if}}"><a href="/auth/login#login">Войти</a></li>
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>
